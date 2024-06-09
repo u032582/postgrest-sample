@@ -1,0 +1,9 @@
+services:
+  vscode_debug:
+    image: mcr.microsoft.com/devcontainers/base:jammy
+    container_name: vscode_debug
+    volumes:
+      - .:/workspace
+    command: sleep infinity
+    labels:
+      - "com.microsoft.vscode.remote.devPort=0"
